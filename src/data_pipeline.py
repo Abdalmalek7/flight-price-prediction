@@ -254,13 +254,10 @@ def run_data_pipeline(test_size: float = 0.2, random_state: int = 42):
     y = processed_df[target_col]
     # Build pipeline
     preproc = pipeline_preprocesing()
-    preproc.fit(X)
-
+    # Transform train/val
+    X = preproc.fit_transform(X)
     # Save preprocessing pipeline
     joblib.dump(preproc, PIPELINE_PATH)
-
-    # Transform train/val
-    X = preproc.transform(X)
 
     # Convert back to DataFrame with readable column names
     feature_names = preproc.get_feature_names_out()
