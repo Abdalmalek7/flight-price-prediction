@@ -15,16 +15,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.inference import load_trained_model, load_pipeline, predict_from_raw
 from src.data_pipeline import *
 
-st.title("Zomato Restaurant Success Predictor")
-
-st.write(
-    """
-This demo predicts whether a restaurant is likely to **succeed or not** based on its features.
-
-You can enter restaurant details below and see the predicted success score.
-"""
-)
-
 
 
 @st.cache_resource
