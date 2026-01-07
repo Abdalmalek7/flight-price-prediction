@@ -1,0 +1,7 @@
+gitHub:
+
+https://github.com/Abdalmalek7/flight-price-prediction/tree/main
+
+streamlit:
+
+https://flight-price-prediction1.streamlit.app/
